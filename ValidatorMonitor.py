@@ -2,7 +2,7 @@ import subprocess
 import requests
 from discord import Webhook, RequestsWebhookAdapter
 from time import gmtime, strftime
-ValidatorID = "#ValidatorIP"#valadator ID easiy pleace to find it is https://araviel.io/consensus-arena/
+ValidatorID = "#ValidatorID"#valadator ID easiy pleace to find it is https://araviel.io/consensus-arena/
 ValidatorCheckTime = 5 #time in minutes
 #create your own discord change and create a webhock then copy it below
 webhook = Webhook.from_url("Discord Webhock", adapter=RequestsWebhookAdapter())
