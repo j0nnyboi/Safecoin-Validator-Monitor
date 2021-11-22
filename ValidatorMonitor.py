@@ -7,12 +7,10 @@ ValidatorID = "#ValidatorID"#valadator ID easiy pleace to find it is https://ara
 Discord_Web_Hock = "Discord Webhock" #create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
 
 ValidatorCheckTime = 5 #time in minutes
-#create your own discord change and create a webhock then copy it below
 webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
 
-
 def DiscordSend():
-        webhook.send("your Validator has gone off line")
+        webhook.send("Your validator has gone off line")
         
 #hour = strftime("%H", gmtime())
 #min = strftime("%M", gmtime())
