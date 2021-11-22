@@ -3,8 +3,12 @@ import requests
 from discord import Webhook, RequestsWebhookAdapter
 from time import gmtime, strftime
 
+########################################## Need to add your Validator ID & Webhock ############################################################
+
 ValidatorID = "#ValidatorID"#valadator ID easiy pleace to find it is https://araviel.io/consensus-arena/
 Discord_Web_Hock = "Discord Webhock" #create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
+
+###############################################################################################################################################
 
 ValidatorCheckTime = 5 #time in minutes
 webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
