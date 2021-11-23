@@ -8,6 +8,8 @@ from time import gmtime, strftime
 ValidatorID = "#ValidatorID"#valadator ID easiy pleace to find it is https://araviel.io/consensus-arena/
 Discord_Web_Hock = "Discord Webhock" #create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
 
+
+########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
 
 ValidatorCheckTime = 5 #time in minutes
