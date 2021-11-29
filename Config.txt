@@ -1,0 +1,8 @@
+
+##valadator ID easiy place to find it is https://araviel.io/consensus-arena/
+## ie ValidatorID  = ugQhN1a9uuztc3ttMEMBH3kGJ4bKmmaiEBTvdkc2Wff
+ValidatorID = ValidatorID
+
+##create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
+## ie Discord_Web_Hock = https://discordapp.com/api/webhooks/************/**************-********************************_**************
+Discord_Web_Hock = Discord_Webhock

@@ -4,13 +4,37 @@ from discord import Webhook, RequestsWebhookAdapter
 from time import gmtime, strftime
 
 ########################################## Need to add your Validator ID & Webhock ############################################################
+ValidatorID = None
+Discord_Web_Hock = None
+f = open("Config.txt", "r")
+lines = f.readlines()
+for line in lines:
+    if("##") in line:
+        continue
+    if("ValidatorID") in line:
+        ValidatorID = line.split("=")[1].strip()
+        
+    if("Discord_Web_Hock") in line:
+        Discord_Web_Hock  = line.split("=")[1].strip()
+        
 
-ValidatorID = "#ValidatorID"#valadator ID easiy pleace to find it is https://araviel.io/consensus-arena/
-Discord_Web_Hock = "Discord Webhock" #create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
 
-
+if(Discord_Web_Hock == None or ValidatorID == None):
+        print("Please enter correct details in the config.txt")
+        exit()
+if("Discord_Webhock" in Discord_Web_Hock):
+        print("please enter discord webhock")
+        exit()
+if("ValidatorID" in ValidatorID):
+        print("please enter your Validator ID")
+        exit()
+        
+print("Your Validator ID = ",ValidatorID)
+print("Your Discord_Web_Hock = ",Discord_Web_Hock)       
+print("Any safecoin Donations at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc")
 ########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
+
 
 ValidatorCheckTime = 5 #time in minutes
 webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
