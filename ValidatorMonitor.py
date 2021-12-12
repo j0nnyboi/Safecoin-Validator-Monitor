@@ -1,7 +1,7 @@
 import subprocess
 import requests
 from discord import Webhook, RequestsWebhookAdapter
-from time import gmtime, strftime
+from time import gmtime, strftime,sleep
 
 ########################################## Need to add your Validator ID & Webhock ############################################################
 ValidatorID = None
@@ -50,7 +50,7 @@ hourpre = 0
 Counter = 99
 AlarmSent = False
 while True:
-        delay(10000)
+        sleep(10)
         Min = strftime("%M", gmtime())
         hour = strftime("%H", gmtime())
         if(hour != hourpre):
