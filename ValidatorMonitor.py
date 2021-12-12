@@ -50,6 +50,7 @@ hourpre = 0
 Counter = 99
 AlarmSent = False
 while True:
+        delay(10000)
         Min = strftime("%M", gmtime())
         hour = strftime("%H", gmtime())
         if(hour != hourpre):
