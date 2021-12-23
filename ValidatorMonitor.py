@@ -31,7 +31,7 @@ if("ValidatorID" in ValidatorID):
         
 print("Your Validator ID = ",ValidatorID)
 print("Your Discord_Web_Hock = ",Discord_Web_Hock)       
-print("Any safecoin Donations at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc")
+print("Any safecoin Donations at 3Vt2aF7ZL1A9e8nPPofp4o5GuhY6EGeeLsfvSM3PmctU")
 ########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
 
