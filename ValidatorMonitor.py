@@ -1,4 +1,4 @@
-import subprocess
+
 import requests
 from discord import Webhook, RequestsWebhookAdapter
 from time import gmtime, strftime,sleep
@@ -7,12 +7,14 @@ from safecoin.keypair import Keypair
 from safecoin.rpc.api import Client
 from safecoin.rpc.types import MemcmpOpts
 from safecoin.publickey import PublicKey
+
 api_endpoint="https://api.mainnet-beta.safecoin.org"
 client = Client(api_endpoint)
 
 
 
-########################################## Need to add your Validator ID & Webhock ############################################################
+########################################## Need to add your Validator ID & Webhock in config.txt ############################################################
+
 ValidatorID = None
 Discord_Web_Hock = None
 f = open("Config.txt", "r")
@@ -40,21 +42,20 @@ if("ValidatorID" in ValidatorID):
         
 print("Your Validator ID = ",ValidatorID)
 print("Your Discord_Web_Hock = ",Discord_Web_Hock)       
-print("Any safecoin Donations at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc")
+print("Safecoin Donations at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc")
 ########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
 
 
 
-ValidatorCheckTime = 5 #time in minutes
-webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
+ValidatorCheckTime = 5 #time in minutes between checking for you validator is off line
 
 def DiscordSend():
-        webhook.send("Your validator has gone off line")
-        
-#hour = strftime("%H", gmtime())
-#min = strftime("%M", gmtime())
-#day = strftime("%d", gmtime())
+        webhook.send("Your validator has gone off line")# change to your own custom message
+
+
+webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
+
 Minpre = 0
 hourpre = 0
 Counter = 99
