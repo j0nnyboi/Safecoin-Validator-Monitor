@@ -40,7 +40,7 @@ if("ValidatorID" in ValidatorID):
         
 print("Your Validator ID = ",ValidatorID)
 print("Your Discord_Web_Hock = ",Discord_Web_Hock)       
-print("Any safecoin Donations at 3Vt2aF7ZL1A9e8nPPofp4o5GuhY6EGeeLsfvSM3PmctU")
+print("Any safecoin Donations at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc")
 ########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
 
@@ -73,6 +73,7 @@ while True:
                         Counter = 0
                         if(client.is_connected() == True):
                             validatorList = (client.get_vote_accounts()['result']['delinquent'])
+                            print("Latest delinquent validators")
                             for vals in validatorList:
                                 ValPubkey = vals['nodePubkey']
                                 print(ValPubkey)
@@ -81,6 +82,7 @@ while True:
                                     if(AlarmSent == False):
                                         DiscordSend()
                                         AlarmSent = True
+                            print("")
                         else:
                             client = Client(api_endpoint)                        
                         
