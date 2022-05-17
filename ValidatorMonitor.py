@@ -9,7 +9,7 @@ from safecoin.rpc.types import MemcmpOpts
 from safecoin.publickey import PublicKey
 api_endpoint="https://api.mainnet-beta.safecoin.org"
 client = Client(api_endpoint)
-print(client.is_connected())
+
 
 
 ########################################## Need to add your Validator ID & Webhock ############################################################
@@ -33,7 +33,7 @@ if(Discord_Web_Hock == None or ValidatorID == None):
         exit()
 if("Discord_Webhock" in Discord_Web_Hock):
         print("please enter discord webhock")
-        #exit()
+        exit()
 if("ValidatorID" in ValidatorID):
         print("please enter your Validator ID")
         exit()
@@ -43,12 +43,8 @@ print("Your Discord_Web_Hock = ",Discord_Web_Hock)
 print("Any safecoin Donations at 3Vt2aF7ZL1A9e8nPPofp4o5GuhY6EGeeLsfvSM3PmctU")
 ########################################## Safecoin Donations taken at es7DKe3NyR1u8MJNuv6QV6rbhmZQkyYUpgKpGJNuTTc ############################
 ###############################################################################################################################################
-validatorList = (client.get_vote_accounts()['result']['delinquent'])
-for vals in validatorList:
-    print(vals['nodePubkey'])
-    if("ASGqBtTsxdSPDnop8MjmUgPAoTNzDSXiGGeygqZkGLzo" in vals['nodePubkey']):
-        print("^^^^^^^^^^^^found my Validator^^^^^^^^^^")
-"""
+
+
 
 ValidatorCheckTime = 5 #time in minutes
 webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
@@ -75,31 +71,18 @@ while True:
                 Counter += 1
                 if(Counter >= ValidatorCheckTime):
                         Counter = 0
-                        proc = subprocess.Popen(["~/Safecoin/target/release/safecoin validators"], stdout=subprocess.PIPE, shell=True)
-                        (out, err) = proc.communicate()
-                        lines = ""
-                        DilValList = []
-                        for char in out:
-                                #print(chr(char))
-                                lines = lines + chr(char)
-                        lines = lines.split('\n')
-                        for line in lines:
-                                linesplit = line.split()
-                                try:
-                                        if('â' in linesplit[0]):
-                                                #print(linesplit)
-                                                if(ValidatorID in linesplit[2]):
-                                                        print("found my valiadator")
-                                                        if(AlarmSent == False):
-                                                                DiscordSend()
-                                                                AlarmSent = True
-                                                print(linesplit[2],linesplit[3])
-                                                DilValList.append(linesplit[2])
-                                except:
-                                        continue
+                        if(client.is_connected() == True):
+                            validatorList = (client.get_vote_accounts()['result']['delinquent'])
+                            for vals in validatorList:
+                                ValPubkey = vals['nodePubkey']
+                                print(ValPubkey)
+                                if(ValidatorID in ValPubkey):
+                                    print("^^^^^^^^^^^^found my Validator^^^^^^^^^^")
+                                    if(AlarmSent == False):
+                                        DiscordSend()
+                                        AlarmSent = True
+                        else:
+                            client = Client(api_endpoint)                        
                         
                         
-
-
-        
-"""
+                        
