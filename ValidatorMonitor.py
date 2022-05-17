@@ -76,10 +76,11 @@ while True:
                             validatorList = (client.get_vote_accounts()['result']['delinquent'])
                             print("Latest delinquent validators")
                             for vals in validatorList:
-                                ValPubkey = vals['nodePubkey']
-                                print(ValPubkey)
-                                if(ValidatorID in ValPubkey):
-                                    print("^^^^^^^^^^^^found my Validator^^^^^^^^^^")
+                                nodePubkey = vals['nodePubkey']
+                                votePubkey = vals['votePubkey']
+                                print(nodePubkey,votePubkey)
+                                if(ValidatorID in nodePubkey or ValidatorID in votePubkey):
+                                    print("^^^^^^^^^^^^^^^^^^^found my Validator^^^^^^^^^^^^^^^^^^")
                                     if(AlarmSent == False):
                                         DiscordSend()
                                         AlarmSent = True
