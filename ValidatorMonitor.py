@@ -92,11 +92,11 @@ while True:
                         VoteBalance = int(client.get_balance(ValidatorVote)['result']['value'])/1000000000
                         print("Vote account balance = ",VoteBalance)
                         if(VoteBalance > VoteBalanceWarn):
-                            DiscordSend("you have earnt to much safe, to be on your validator, time to move it, use (~/Safecoin/target/release/safecoin withdraw-from-vote-account ledger/validator-vote-account.json DesternationWallet amount)")
+                            DiscordSend("you have earnt to much safe, to be on your validator, time to move it,amount is %s use (~/Safecoin/target/release/safecoin withdraw-from-vote-account ledger/validator-vote-account.json DesternationWallet amount)"% VoteBalance)
                         IDBalance = int(client.get_balance(ValidatorID)['result']['value'])/1000000000
                         print("Identity account balance = ",IDBalance)
                         if(IDBalance < IdentityBalanceWarn):
-                            DiscordSend("Running out of safe to vote please add some to address %s" % ValidatorID)
+                            DiscordSend("Running out of safe, you only have %s left to vote with, please add some to address %s" % (IDBalance,ValidatorID))
                     else:
                         client = Client(api_endpoint)
                 
