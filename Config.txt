@@ -8,10 +8,10 @@ ValidatorIDENTITY = ValidatorIDENTITY
 ValidatorVOTE = ValidatorVOTE
 ##########################################################################################################################################################################################################################
 ## VoteBalanceWarn is when you have a number in your validator vote account and should move it out once it is greater then this 
-VoteBalanceWarn = 30
+VoteBalanceWarn = 50
 ##########################################################################################################################################################################################################################
 ## IdentityBalanceWarn is your identity that is used for voting, if this falls below this value it warns you too add safe to keep on voting
-IdentityBalanceWarn = 100
+IdentityBalanceWarn = 30
 ##########################################################################################################################################################################################################################
 ##create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
 ## ie Discord_Web_Hock = https://discordapp.com/api/webhooks/************/**************-********************************_**************
