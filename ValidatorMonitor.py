@@ -1,6 +1,6 @@
 
 import requests
-from discord import Webhook, RequestsWebhookAdapter
+from discord import SyncWebhook
 from time import gmtime, strftime,sleep
 
 from safecoin.keypair import Keypair
@@ -71,7 +71,7 @@ def DiscordSend(StringToSend):
         webhook.send(StringToSend)
 
 
-webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
+webhook = SyncWebhook.from_url(Discord_Web_Hock)
 
 Minpre = 0
 Daypre = 0
