@@ -3,8 +3,7 @@ install python > 3.8
 make sure you install pip and add path varible tick box
 
 in CMD or terminal run
-pip3 install discord
-pip3 install requests
+pip3 install -r req.txt
 
 Create a new channel on discord if needed, on channel from settings create a webhock, copy webhock into the config.txt file 
 
