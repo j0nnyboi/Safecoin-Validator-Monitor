@@ -92,7 +92,7 @@ while True:
                         VoteBalance = int(client.get_balance(ValidatorVote)['result']['value'])/1000000000
                         print("Vote account balance = ",VoteBalance)
                         if(VoteBalance > VoteBalanceWarn):
-                            DiscordSend("you have earnt to much safe, to be on your validator, time to move it,amount is %s use (~/Safecoin/target/release/safecoin withdraw-from-vote-account -k ledger/validator-vote-account.json DesternationWallet amount)"% VoteBalance)
+                            DiscordSend("you have earnt to much safe, to be on your validator, time to move it,amount is %s use (~/Safecoin/target/release/safecoin withdraw-from-vote-account VoteAddress DesternationWallet amount)"% VoteBalance)
                         IDBalance = int(client.get_balance(ValidatorID)['result']['value'])/1000000000
                         print("Identity account balance = ",IDBalance)
                         if(IDBalance < IdentityBalanceWarn):
