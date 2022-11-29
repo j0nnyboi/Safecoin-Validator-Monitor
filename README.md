@@ -12,3 +12,5 @@ copy your validator ID's into the config.txt file
 run on any PC.
 
 you can manualy run or add to a systemctl
+
+Windows x64 compile binnary in output/ValidatorMonitor folder, edit config.txt and run exe

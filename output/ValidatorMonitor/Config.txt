@@ -1,0 +1,19 @@
+##########################################################################################################################################################################################################################
+##valadator identity easiy place to find it is https://araviel.io/consensus-arena/
+## ie ValidatorIDENTITY = ugQhN1a9uuztc3ttMEMBH3kGJ4bKmmaiEBTvdkc2Wff
+ValidatorIDENTITY = ValidatorIDENTITY
+##########################################################################################################################################################################################################################
+##valadator vote once you now your identity, easiy place to find it is https://safecoin.safegw.net:3000/d/Qn9y9HXMA/validators-and-vote-account-monitoring-atsafecoin-org?orgId=1&refresh=1m
+##ie ValidatorVOTE = 4F4Ghx6Pj9GxLqJDFhMKc65qKDWSC1jUqdTAHSePnQ9h 
+ValidatorVOTE = ValidatorVOTE
+##########################################################################################################################################################################################################################
+## VoteBalanceWarn is when you have a number in your validator vote account and should move it out once it is greater then this 
+VoteBalanceWarn = 50
+##########################################################################################################################################################################################################################
+## IdentityBalanceWarn is your identity that is used for voting, if this falls below this value it warns you too add safe to keep on voting
+IdentityBalanceWarn = 30
+##########################################################################################################################################################################################################################
+##create a new channel if needed, create webhock from settings of channel, copy webhock and past here 
+## ie Discord_Web_Hock = https://discordapp.com/api/webhooks/************/**************-********************************_**************
+Discord_Web_Hock = Discord_Webhock
+##########################################################################################################################################################################################################################
