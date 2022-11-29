@@ -1,6 +1,6 @@
 
 import requests
-from discord import SyncWebhook
+from discord import Webhook, RequestsWebhookAdapter
 from time import gmtime, strftime,sleep
 
 from safecoin.keypair import Keypair
@@ -10,7 +10,6 @@ from safecoin.publickey import PublicKey
 
 api_endpoint="https://api.mainnet-beta.safecoin.org"
 client = Client(api_endpoint)
-
 
 
 ########################################## Need to add your Validator ID & Webhock in config.txt ############################################################
@@ -71,7 +70,7 @@ def DiscordSend(StringToSend):
         webhook.send(StringToSend)
 
 
-webhook = SyncWebhook.from_url(Discord_Web_Hock)
+webhook = Webhook.from_url(Discord_Web_Hock, adapter=RequestsWebhookAdapter())
 
 Minpre = 0
 Daypre = 0
